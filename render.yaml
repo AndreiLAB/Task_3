@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: lcm-service
+    env: dotnet
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: dotnet out/LcmService.dll
+    plan: free
