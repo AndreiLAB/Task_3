@@ -8,6 +8,8 @@ var app = builder.Build();
 long Gcd(long a, long b) => b == 0 ? a : Gcd(b, a % b);
 long Lcm(long a, long b) => a / Gcd(a, b) * b;
 
+app.Urls.Add("http://0.0.0.0:8080");
+
 app.MapGet("/andrei_ziber22_gmail_com", (HttpRequest req) =>
 {
     if (!long.TryParse(req.Query["x"], out var x) ||
